@@ -5,12 +5,12 @@ By signing up, and minting their own ERC998 DevAvatar token - devs acknowledge t
 An ethereum developer without their avatar on rinkeby is like an amateur tattoo artist who has never put a needle to raw skin
 
 - I'm hoping this high rhetoric will encourage my peers to join my platform where we can figure out how to build the decentralized world we need: One package at a time
-  I'm talking about getting web3 working with React, (Drizzle anyone?), how to Python the blockchain, figuring out how to encourage adoption by muggles, etc.
+- I'm talking about getting web3 working with React, (Drizzle anyone?), how to Python the blockchain, figuring out how to encourage adoption by muggles, etc.
 
 The code base:
 
 With regret, some of the ui work is still in progress. The smart contracts are complete, however, and can be interacted with on Rinkeby at:
-0x048193514fb5c23ece94c83797fc9a3ed0a612de
+- 0x048193514fb5c23ece94c83797fc9a3ed0a612de
 
 1. Connecting to the smart contracts:
 
