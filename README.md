@@ -14,19 +14,25 @@ With regret, some of the ui work is still in progress. The smart contracts are c
 
 1. Connecting to the smart contracts:
 
-// Brief walkthrough to interact with the DevAvatar contract on Rinkeby
-// npm install remixd -g
-// git clone >>>
-// remixd -s ./path_to/DevAvatar/contracts
+Brief walkthrough to interact with the DevAvatar contract on Rinkeby
 
-// open a browser, switch to Rinkeby test net, fetch test net ether from https://faucet.rinkeby.io/
-// navigate to https://remix.ethereum.org
-// click the 'link' icon top left of the screen "Connect to Local Host"
-// expand newly loaded localhost dropdown, navigate to DevAvatar.sol - it should compile without issue
-// click the 'run' tab - top right
-// beneath the 'DevAvatar' box, paste 0x048193514fb5c23ece94c83797fc9a3ed0a612de into the "Load contract from Address"; click "atAddress"
-// a dropdown list will load below, expanding it reveals the smart contract abi
-// feel welcome to create a few child tokens!
+git clone https:github.com/manusmrit/devavatar.git
+git checkout development
+git pull
+
+npm install remixd -g
+remixd -s ./path_to/DevAvatar/contracts
+
+Please specify the exact path as on your system
+
+open a browser, switch to Rinkeby test net, fetch test net ether from https:faucet.rinkeby.io/
+navigate to https:remix.ethereum.org
+click the 'link' icon top left of the screen "Connect to Local Host"
+expand newly loaded localhost dropdown, navigate to DevAvatar.sol - it should compile without issue
+click the 'run' tab - top right
+beneath the 'DevAvatar' box, paste 0x048193514fb5c23ece94c83797fc9a3ed0a612de into the "Load contract from Address"; click "atAddress"
+a dropdown list will load below, expanding it reveals the smart contract abi
+feel welcome to create a few child tokens!
 
 2 The Dapp:
 
@@ -36,15 +42,28 @@ Please download the UPort App to you mobile or you wont be able to login into th
 
 Please collect some Rinkeby test ether for the account from which you will trigger the smart contract transactions from.
 
-// @notice that the UI will check if you already have a token with the current Rinkeby-Metamask account and redirect you to a dead end
-// please try a different Rinkeby account with ether in this case
+@notice that the UI will check if you already have a token with the current Rinkeby-Metamask account and redirect you to a dead end
+Please try a different Rinkeby account with ether in this case
 
-// in project root folder do:
-// npm install
-// npm run start
-// click login and follow the instructions
-// mint DevAvatar
-// WIP: mint child token, transfer child tokens, user posts..
+required packages:
+npm install truffle -g
+npm install ganache-cli -g
+
+For running tests please launch an instance of ganache-cli from a terminal
+Tests will be run on the virtual blockchain whereas the live contract will be polled for the UI
+
+Then in project root folder do:
+
+edit the truffle.js file, insert your metamask mnemonic and infura api access key for Rinkeby (if you dont have a local geth instance)
+
+Open a terminal and run:
+npm install
+npm run start
+
+Your browser should automatically load, from the login screen you may:
+click login and follow the instructions
+mint DevAvatar
+WIP: mint child token, transfer child tokens, user posts..
 
 Reference Material:
 
@@ -54,10 +73,6 @@ This repo started as a two truffle boxes:
 
 - Drizzle Truffle Box: https://github.com/truffle-box/drizzle-box
 - Uport Box http://truffleframework.com/boxes/react-uport
-
-## Environmental Variables
-
-You need to set infuraKey, uportNudgeClientID, and uportNudgeSignerKey (checkout config/env.js)
 
 ## Installation
 
