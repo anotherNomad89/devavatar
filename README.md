@@ -10,15 +10,18 @@ An ethereum developer without their avatar on rinkeby is like an amateur tattoo 
 The code base:
 
 With regret, some of the ui work is still in progress. The smart contracts are complete, however, and can be interacted with on Rinkeby at:
+
 - 0x048193514fb5c23ece94c83797fc9a3ed0a612de
 
 1. Connecting to the smart contracts:
 
 Brief walkthrough to interact with the DevAvatar contract on Rinkeby
 
-- git clone https:github.com/manusmrit/devavatar.git
+- git clone https:github.com/manusmrit/devavatar.git // or download the zip file and extract if there are permission errors
 - git checkout development
 - git pull
+
+Please note development branch is where the code sits by default
 
 - npm install remixd -g
 - remixd -s ./path_to/DevAvatar/contracts
