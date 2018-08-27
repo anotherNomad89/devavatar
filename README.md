@@ -25,15 +25,17 @@ Brief walkthrough to interact with the DevAvatar contract on Rinkeby
 
 Please specify the exact path as on your system
 
-- open a browser, switch to Rinkeby test net, fetch test net ether from https:faucet.rinkeby.io/
-  navigate to https:remix.ethereum.org
+- open a browser
+- switch to Rinkeby test net
+- fetch test net ether from https:faucet.rinkeby.io/
+- navigate to https:remix.ethereum.org
 
 - click the 'link' icon top left of the screen "Connect to Local Host"
-- expand newly loaded localhost dropdown, navigate to DevAvatar.sol - it should compile without issue
-  click the 'run' tab - top right
+- expand newly loaded localhost dropdown, navigate to DevAvatar.sol
+- click the 'run' tab - top right
 - beneath the 'DevAvatar' box, paste 0x048193514fb5c23ece94c83797fc9a3ed0a612de into the "Load contract from Address"; click "atAddress"
 - a dropdown list will load below, expanding it reveals the smart contract abi
-  feel welcome to create a few child tokens!
+- feel welcome to create a few child tokens!
 
 2 The Dapp:
 
@@ -56,11 +58,14 @@ Tests will be run on the virtual blockchain whereas the live contract will be po
 
 Then in project root folder do:
 
-- edit the truffle.js file, insert your metamask mnemonic and infura api access key for Rinkeby (if you dont have a local geth instance)
+- edit the truffle.js file, insert your metamask mnemonic (for the account with testnet ether in it) and infura api access key for Rinkeby (if you dont have a local geth instance)
+- if you dont have an access key please sign up for one on infura.io
 
 Open a terminal and run:
 
 - npm install
+- truffle compile --reset
+- truffle migrate --network rinkeby
 - npm run start
 
 Your browser should automatically load, from the login screen you may:
