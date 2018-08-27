@@ -16,23 +16,24 @@ With regret, some of the ui work is still in progress. The smart contracts are c
 
 Brief walkthrough to interact with the DevAvatar contract on Rinkeby
 
-git clone https:github.com/manusmrit/devavatar.git
-git checkout development
-git pull
+- git clone https:github.com/manusmrit/devavatar.git
+- git checkout development
+- git pull
 
-npm install remixd -g
-remixd -s ./path_to/DevAvatar/contracts
+- npm install remixd -g
+- remixd -s ./path_to/DevAvatar/contracts
 
 Please specify the exact path as on your system
 
-open a browser, switch to Rinkeby test net, fetch test net ether from https:faucet.rinkeby.io/
-navigate to https:remix.ethereum.org
-click the 'link' icon top left of the screen "Connect to Local Host"
-expand newly loaded localhost dropdown, navigate to DevAvatar.sol - it should compile without issue
-click the 'run' tab - top right
-beneath the 'DevAvatar' box, paste 0x048193514fb5c23ece94c83797fc9a3ed0a612de into the "Load contract from Address"; click "atAddress"
-a dropdown list will load below, expanding it reveals the smart contract abi
-feel welcome to create a few child tokens!
+- open a browser, switch to Rinkeby test net, fetch test net ether from https:faucet.rinkeby.io/
+  navigate to https:remix.ethereum.org
+
+- click the 'link' icon top left of the screen "Connect to Local Host"
+- expand newly loaded localhost dropdown, navigate to DevAvatar.sol - it should compile without issue
+  click the 'run' tab - top right
+- beneath the 'DevAvatar' box, paste 0x048193514fb5c23ece94c83797fc9a3ed0a612de into the "Load contract from Address"; click "atAddress"
+- a dropdown list will load below, expanding it reveals the smart contract abi
+  feel welcome to create a few child tokens!
 
 2 The Dapp:
 
@@ -46,24 +47,27 @@ Please collect some Rinkeby test ether for the account from which you will trigg
 Please try a different Rinkeby account with ether in this case
 
 required packages:
-npm install truffle -g
-npm install ganache-cli -g
+
+- npm install truffle -g
+- npm install ganache-cli -g
 
 For running tests please launch an instance of ganache-cli from a terminal
 Tests will be run on the virtual blockchain whereas the live contract will be polled for the UI
 
 Then in project root folder do:
 
-edit the truffle.js file, insert your metamask mnemonic and infura api access key for Rinkeby (if you dont have a local geth instance)
+- edit the truffle.js file, insert your metamask mnemonic and infura api access key for Rinkeby (if you dont have a local geth instance)
 
 Open a terminal and run:
-npm install
-npm run start
+
+- npm install
+- npm run start
 
 Your browser should automatically load, from the login screen you may:
-click login and follow the instructions
-mint DevAvatar
-WIP: mint child token, transfer child tokens, user posts..
+
+- click login and follow the instructions
+- mint DevAvatar
+- WIP: mint child token, transfer child tokens, user posts..
 
 Reference Material:
 
@@ -73,50 +77,3 @@ This repo started as a two truffle boxes:
 
 - Drizzle Truffle Box: https://github.com/truffle-box/drizzle-box
 - Uport Box http://truffleframework.com/boxes/react-uport
-
-## Installation
-
-1. Make sure you have Truffle and Ganace CLI (I'm using the GUI)
-   ```javascript
-   npm install -g truffle
-   npm install -g ganache-cli
-   ```
-
-I'm using the ganache-1.0.2 AppImage from http://truffleframework.com/ganache/
-
-2. The Truffle box has already been unboxed, so all you need to do is
-
-   ```
-   truffle compile
-   truffle migrate
-   ```
-
-   Note: for the GUI, use
-
-   ```
-   truffle migrate --network ganache_gui
-   ```
-
-   And if you want to add a network, like main or a test net, add it to truffle.js as a network. Refer to http://truffleframework.com/docs/advanced/configuration. Truffle-config.js is for Windows compatibility.
-
-3. In your browser of choice (I'm using Firefox), open metamask and add an RPC network. Then add whichever accounts you'll need via the import account functionality.
-
-4. Start the app with
-
-   ```
-   npm run start
-   ```
-
-   and make sure MetaMask is unlocked and on the correct network. If you get a loading screen, Metamask or your RPC node is probably the issue.
-
-5. Tests are using Jest, and are done via
-
-   ```
-   npm run test
-   ```
-
-6. To build for production
-
-   ```
-   npm run build
-   ```
